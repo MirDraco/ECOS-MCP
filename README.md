@@ -1,6 +1,6 @@
 # ECOS Economic Data MCP Server
 
-한국은행 ECOS Open API를 자연어 지표 검색, 정규화된 시계열 조회, 비교와 객관적 통계 계산으로 제공하는 공유형 MCP 서버입니다. 경제적 해석이나 투자 판단은 반환하지 않습니다.
+한국은행 ECOS Open API를 자연어 지표 검색, 정규화된 시계열 조회, 비교와 객관적 통계 계산으로 제공하는 공유형 MCP 서버입니다. 경제적 해석이나 투자 판단은 반환하지 않습니다. 현재 `FastMCP` 기반 구현과 호환되는 공식 MCP Python SDK v1 유지보수 라인(`mcp<2`)을 사용합니다.
 
 ## Architecture
 
