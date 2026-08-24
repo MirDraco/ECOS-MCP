@@ -1,0 +1,13 @@
+services:
+  ecos-mcp:
+    build: .
+    ports:
+      - "${MCP_PORT:-18765}:${MCP_PORT:-18765}"
+    env_file:
+      - .env
+    volumes:
+      - ecos-cache:/app/data
+    restart: unless-stopped
+
+volumes:
+  ecos-cache:

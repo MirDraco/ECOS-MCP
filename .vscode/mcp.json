@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "ecos-economic-data": {
+      "type": "http",
+      "url": "http://localhost:18765/mcp"
+    }
+  }
+}

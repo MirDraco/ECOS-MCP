@@ -1,0 +1,29 @@
+[project]
+name = "ecos-mcp"
+version = "0.1.0"
+description = "A reliable, normalized Bank of Korea ECOS MCP server."
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27,<1",
+    "pydantic>=2.7,<3",
+    "pydantic-settings>=2.2,<3",
+    "python-dotenv>=1.0,<2",
+    "mcp>=2.0.0,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "respx>=0.21"]
+
+[project.scripts]
+ecos-mcp = "ecos_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ecos_mcp"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
